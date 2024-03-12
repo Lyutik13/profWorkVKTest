@@ -2,12 +2,12 @@
   "name": "search-project",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://Lyutik13.github.io/profWorkVKTest",
+  "homepage": "https://Lyutik13.github.io/profWorkVKTest/",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
@@ -32,5 +32,9 @@
     "react-content-loader": "^6.2.1",
     "typescript": "^5.2.2",
     "vite": "^5.1.4"
-  }
+  },
+  "description": "# 🛠 Стэк: (React, state-React Context, SASS, Axios, backend-mockapi, ui-Ant Design, vite)",
+  "main": "index.js",
+  "author": "1",
+  "license": "ISC"
 }
