@@ -8,8 +8,8 @@ export const CategoryBtnPrivate: React.FC = () => {
 
 	const categoryBtnPrivate = [
 		{ name: "all", sortProperty: "all" },
-		{ name: "closed", sortProperty: false },
-		{ name: "open", sortProperty: true },
+		{ name: "closed", sortProperty: "false" },
+		{ name: "open", sortProperty: "true" },
 	];
 
 	return (

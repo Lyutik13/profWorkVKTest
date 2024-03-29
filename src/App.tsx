@@ -38,7 +38,7 @@ export default function App() {
 		setShowAlert(false);
 
 		const colorId = color !== "all" ? `avatar_color=${color}` : "";
-		const privateId = group !== "all" ? `closed=${group}` : group === "all";
+		const privateId = group !== "all" ? `closed=${group.toString()}` : group === "all";
 
 		await axios
 			.get(

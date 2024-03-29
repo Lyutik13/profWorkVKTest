@@ -1,4 +1,6 @@
-const filterUsersByCategory = (users, category) => {
+import { Group } from "../types";
+
+const filterUsersByCategory = (users: Group[], category: string) => {
 	switch (category) {
 		case "all":
 			return users;
