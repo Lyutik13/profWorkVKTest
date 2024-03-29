@@ -1,17 +1,18 @@
 import React from "react";
 import { Card, Badge, Popover, Button } from "antd";
 
-import AppContext from "../../context";
+import AppContext from "../../context.tsx";
+import { Group } from "../../types.ts";
 
 const { Meta } = Card;
-const CardGrups = ({ circle, name, status, friends, subscribersCount }) => {
+const CardGrups: React.FC<Group> = ({ avatar_color, name, closed, friends, members_count }) => {
 	const { isLoading } = React.useContext(AppContext);
-	const textColorClass = status === false ? "redText" : "greenText";
+	const textColorClass = closed === false ? "redText" : "greenText";
 
 	return (
 		<Card className="Card" style={{ width: 200 }} loading={isLoading}>
-			{circle ? (
-				<div className="circle" style={{ background: circle }}></div>
+			{avatar_color ? (
+				<div className="circle" style={{ background: avatar_color }}></div>
 			) : (
 				<div className="noImg">
 					<img
@@ -23,7 +24,7 @@ const CardGrups = ({ circle, name, status, friends, subscribersCount }) => {
 			<Meta
 				title={name}
 				className={textColorClass}
-				description={status === false ? "closed" : "open"}
+				description={closed === false ? "closed" : "open"}
 			/>
 			{friends && (
 				<Badge className="BadgeFrends" count={friends.length} offset={[15, 2.5]}>
@@ -39,12 +40,8 @@ const CardGrups = ({ circle, name, status, friends, subscribersCount }) => {
 				</Badge>
 			)}
 			<br />
-			{subscribersCount >= 1 && (
-				<Badge
-					className="BadgeFrends"
-					count={subscribersCount}
-					overflowCount={999}
-					offset={[20, 7]}>
+			{members_count >= 1 && (
+				<Badge className="BadgeFrends" count={members_count} overflowCount={999} offset={[20, 7]}>
 					subscribers
 				</Badge>
 			)}

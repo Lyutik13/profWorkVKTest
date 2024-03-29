@@ -1,9 +1,9 @@
 import React from "react";
 import { Button } from "antd";
 
-import AppContext from "../context.jsx";
+import AppContext from "../context.tsx";
 
-export const CategoryBtnPrivate = () => {
+export const CategoryBtnPrivate: React.FC = () => {
 	const { filterPrivate, setFilterPrivate } = React.useContext(AppContext);
 
 	const categoryBtnPrivate = [

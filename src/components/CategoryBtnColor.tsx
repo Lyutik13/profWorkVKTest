@@ -1,9 +1,9 @@
 import React from "react";
 import { Button } from "antd";
 
-import AppContext from "../context.jsx";
+import AppContext from "../context.tsx";
 
-export const CategoryBtnColor = () => {
+export const CategoryBtnColor: React.FC = () => {
   const {filterColorId, setFilterColorId} = React.useContext(AppContext)
 
 	const categoryBtnColor = ["all", "red", "green", "yellow", "blue", "purple", "white", "orange"];

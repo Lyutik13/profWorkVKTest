@@ -1,9 +1,9 @@
 import React from "react";
 import { Button } from "antd";
 
-import AppContext from "../context.jsx";
+import AppContext from "../context.tsx";
 
-export const CategoryBtnFriends = () => {
+export const CategoryBtnFriends: React.FC = () => {
 	const { filterFriends, setFilterFriends } = React.useContext(AppContext);
 
 	const categoryBtnFriends = ["all", "have friends", "not friends"];
